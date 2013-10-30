@@ -1,3 +1,5 @@
+# used the core author information and run through the field-related xml files to get 
+# output file and author information
 #to parse xml file into field data
 import glob
 import cPickle as pickle
