@@ -22,9 +22,9 @@ for f in fileNames:
 # below two lines are for the first run
 # with open('proceeding.pck', 'wb') as proceeding: 
 #     pickle.dump(refInfo, proceeding)
+# proceeding.close()
 
-# below is for second run in periodical folder
-output = open('reference-info.tsv', 'wb')
-for key, val in refInfo.iteritems():
-    output.write(key + '\t' + val.encode('utf-8') + '\n')
-output.close()
+# # below is for second run in periodical folder
+with open('ref-info.json', mode = 'wb') as refInfoJson:
+    json.dump(refInfo, refInfoJson, indent = 2)
+refInfoJson.close()
