@@ -5,7 +5,6 @@ import cPickle as pickle
 from bs4 import BeautifulSoup
 
 fileNames = glob.glob('*.xml')
-output = open('output.tsv', 'wb') # use this in the second run in periodical folder
 proceeding = open('proceeding.pck', 'rU')
 refInfo = pickle.loads(proceeding.read())
 proceeding.close()
@@ -24,7 +23,8 @@ for f in fileNames:
 # with open('proceeding.pck', 'wb') as proceeding: 
 #     pickle.dump(refInfo, proceeding)
 
+# below is for second run in periodical folder
 output = open('reference-info.tsv', 'wb')
 for key, val in refInfo.iteritems():
-    output.write(key + '\t' + val + '\n')
+    output.write(key + '\t' + val.encode('utf-8') + '\n')
 output.close()
