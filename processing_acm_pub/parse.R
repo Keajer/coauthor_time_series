@@ -1,4 +1,5 @@
-#read in the output file
+# this R script takes SIGIR output file as an example to do the time series analysis
+#read in the output file 
 huge <- readLines(file.choose())
 #find pattern and grep
 pattern <- 'ID [0-9]+$'
