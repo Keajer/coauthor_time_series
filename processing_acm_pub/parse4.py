@@ -1,4 +1,4 @@
-# this file is to get the core authors in a field
+# this file is to get the core authors in a field 
 import glob
 from bs4 import BeautifulSoup
 import pickle
